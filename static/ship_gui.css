@@ -1,0 +1,78 @@
+input[type="text"].name-edit {
+	display: none;
+	font-size: 31.5px;
+	height: 40px;
+	margin-top: 10px;
+}
+
+.name.turn {
+	color: #0f0;
+}
+
+.board.spacer {
+	margin-top: 10px;
+}
+
+.table .border {
+	text-align: center;
+}
+
+.table .border.left {
+	width: 20px;
+	vertical-align: middle;
+}
+
+.game .table .border {
+	color: yellow;
+}
+
+.game .table .border.top {
+	background-image: url("img/wood_tex_h.png");
+}
+
+.game .table .border.left {
+	background-image: url("img/wood_tex_v.png");
+}
+
+.table .cell {
+	height: 60px;
+	background-color: #ccc;
+}
+
+.table .red {
+	color: #fff;
+	background-color: #f00;
+}
+
+.table .white {
+	color: #000;
+	background-color: #fff;
+}
+
+.table .sea,
+.table .sea.ship.noshow {
+	background-size: 100% 100%;
+	background-image: url("img/water.png");
+}
+
+.table .sea.red {
+	background-image: url("img/water_r.png");
+}
+
+.table .sea.white,
+.table .sea.ship.noshow.white {
+	background-image: url("img/water_w.png");
+}
+
+.table .sea.ship {
+	background-image: url("img/water_ship.png");
+}
+
+.table .sea.ship.red,
+.table .sea.ship.noshow.red {
+	background-image: url("img/water_ship_r.png");
+}
+
+.table .sea.ship.white {
+	background-image: url("img/water_ship_w.png");
+}
