@@ -21,7 +21,10 @@ class Player
 				@w_led  = gpio.export 24, {direction: "out", ready: =>
 					@w_led_ready = true
 				}
-				@button = gpio.export 25, {direction: "in"}
+				@button = gpio.export 25, {direction: "in", ready: =>
+				    @button.on "change", (val) =>
+				        @click val
+				}
 
 		# Connect to the websocket server
 		@socket = require("socket.io-client").connect "http://#{host}:#{port}"
@@ -69,13 +72,15 @@ class Player
 				console.log "DEBUG: Fire"
 				@fire()
 		process.stdin.setRawMode true
-		process.stdin.resume()
+		process.stdin.resume()		
 
 	off: =>
 
 	red: =>
 
 	white: =>
+	
+	click: (val) =>
 
 	fire: =>
 		@socket.emit "fire", @id

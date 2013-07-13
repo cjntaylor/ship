@@ -16,8 +16,9 @@ player.red = ->
 player.white = ->
 	console.log "<#{player.id}> LED: WHITE"
 	if player.w_led_ready then player.w_led.set(1)
-
-# Enable the button
-if player.button
-	player.button.on "change", (val) ->
-		if val == 1 then player.fire()
+	
+# Trigger the fire sequence when the button is clicked
+player.click = (val) ->
+    if val == 1
+        console.log "<#{player.id}> FIRE!"
+        player.fire()
