@@ -11,7 +11,7 @@
 		"socket.io": "0.9.x",
 		"socket.io-client": "0.9.x",
 		"keypress": "0.2.x",
-		"play": "0.5.x",
+		"play": "git+https://github.com/Marak/play.js.git#master",
 		"gpio": "0.2.x"
 	}
 }

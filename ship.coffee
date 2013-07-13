@@ -1,7 +1,8 @@
 express = require "express"
-play    = require "play"
 gpio    = require "gpio"
 fs      = require "fs"
+
+play    = require("play").Play()
 
 class Player
 	constructor: (id, host = "192.168.1.170", port = 3030) ->
