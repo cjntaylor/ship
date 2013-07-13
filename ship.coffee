@@ -4,7 +4,7 @@ gpio    = require "gpio"
 fs      = require "fs"
 
 class Player
-	constructor: (id, host = "localhost", port = 3030) ->
+	constructor: (id, host = "192.168.1.170", port = 3030) ->
 		# Save and output the id information for the player
 		@id = id
 		console.log "Player ID: #{@id}"
