@@ -1,9 +1,0 @@
-#!/bin/bash
-
-if [ -f "compiler.pid" ]; then
-	pkill -F compiler.pid
-	rm -f compiler.pid
-else 
-	eval "(node_modules/.bin/coffee -c -w .) &"
-	echo $! > compiler.pid
-fi

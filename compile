@@ -1,0 +1,12 @@
+#!/bin/bash
+
+zenity --info --text "Compiling coffeescript files"
+cd /home/pi/ship
+node_modules/.bin/coffee -c . 2>output
+cat output | sed -r "s:\x1B\[[0-9;]*[mK]::g" > compile.log
+rm output
+if [ -s "compile.log" ]; then
+    pluma compile.log
+else
+    zenity --info --text "Compile complete"
+fi
